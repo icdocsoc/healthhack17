@@ -1,23 +1,34 @@
 PUG=pug
-INCLUDES=$(wildcard _*.pug)
-PAGES=$(patsubst %.pug,%.html,$(wildcard [^_]*.pug))
+HEAD_REV=$(shell git rev-parse HEAD)
 
-all: $(PAGES)
+all: update build
 
-watch:
-	while true; do \
-		clear; \
-		make -s; \
-		inotifywait -qre close_write .; \
-		done
+setup:
+	npm install -g pug-cli
+	npm install
 
-release: webpages.tgz
+update:
+	npm install
+	npm update
 
-webpages.tgz: all
-	tar -cvzf $@ --transform 's,^,website/,' *.html css js
+build:
+	mkdir -p ./build
+	$(PUG) index.pug -o ./build
+	cp -R css ./build/css
+	cp -R js ./build/js
+	cp -R images ./build/images
 
-%.html: %.pug $(INCLUDES)
-	$(PUG) $<
+deploy: build
+	rm -rf build/.git
+	git -C build init .
+	git -C build fetch "git@github.com:ichealthhack/ichealthhack.github.io.git" master
+	git -C build reset --soft FETCH_HEAD
+	git -C build add .
+	if ! git -C build diff-index --quiet HEAD ; then \
+		git -C build commit -m "Deploy ichealthhack/healthhack17@${HEAD_REV}" && \
+		git -C build push "git@github.com:ichealthhack/ichealthhack.github.io.git" master:master ; \
+		fi
+	cd ..
 
 clean:
-	rm *.html
+	rm -rf ./build
