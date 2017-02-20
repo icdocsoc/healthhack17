@@ -14,6 +14,7 @@ update:
 build:
 	mkdir -p ./build
 	$(PUG) index.pug -o ./build
+	cp favicon.png ./build/
 	cp -R css ./build/css
 	cp -R js ./build/js
 	cp -R images ./build/images
