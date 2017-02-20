@@ -1,7 +1,7 @@
 PUG=pug
 HEAD_REV=$(shell git rev-parse HEAD)
 
-all: update build
+all: clean update build
 
 setup:
 	npm install -g pug-cli
