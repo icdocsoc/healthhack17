@@ -1,5 +1,6 @@
 # Custom file ignores
 *.html
+build/
 
 # Created by https://www.gitignore.io/api/macos,vim,linux,node,bower
 
