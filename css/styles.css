@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
 
 html,
 body {
@@ -250,7 +250,6 @@ header .header-content .inner h1 {
 header .header-content .inner p {
     margin-bottom: 50px;
     font-size: 16px;
-    font-weight: 300;
     color: #222;
 }
 
