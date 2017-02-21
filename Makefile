@@ -1,7 +1,6 @@
-PUG=pug
 HEAD_REV=$(shell git rev-parse HEAD)
 
-all: clean update build
+all: update build
 
 setup:
 	npm install -g pug-cli
@@ -11,13 +10,19 @@ update:
 	npm install
 	npm update
 
-build:
-	mkdir -p ./build
-	$(PUG) index.pug -o ./build
-	cp favicon.png ./build/
-	cp -R css ./build/css
-	cp -R js ./build/js
-	cp -R images ./build/images
+build: build/index.html build/images build/css build/js
+
+build/index.html: index.pug
+	pug $< -o ./build
+
+build/images: images
+	rsync -rupE $< build/
+
+build/css: css
+	rsync -rupE $< build/
+
+build/js: js
+	rsync -rupE $< build/
 
 deploy: build
 	rm -rf build/.git
