@@ -34,6 +34,18 @@ html
               i.ion-social-facebook.hidden-md-up
               span.hidden-sm-down Visit our Facebook page
 
+    nav#topNav.navbar.fixed-top.navbar-toggleable-sm.bg-theme
+      .container
+        button.navbar-toggler.hidden-md-up.float-right(type='button', data-toggle='collapse', data-target='#collapsingNavbar')
+          | ☰
+        a.navbar-brand.page-scroll(href='https://ichealthhack.github.io') HealthHack
+        #collapsingNavbar.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link.page-scroll(href='#about') About
+            li.nav-item
+              a.nav-link.page-scroll(href='#partners') Partners
+
     section#about.bg-grey
       .container
         .row
