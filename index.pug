@@ -13,6 +13,17 @@ html
     link(rel='stylesheet', href='css/styles.css')
 
   body
+
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-default
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon.stack
+      a.navbar-brand.text-light(href='#') HealthHack
+      #navbarNavAltMarkup.collapse.navbar-collapse
+          .navbar-nav
+             a.nav-item.nav-link.page-scroll.text-center(href='#about') About
+             a.nav-item.nav-link.page-scroll.text-center(href='#sponsors') Sponsors
+             a.nav-item.nav-link.page-scroll.text-center(href='#partners') Partners
+
     header
       .header-content
         .inner
@@ -34,7 +45,7 @@ html
               i.ion-social-facebook.hidden-md-up
               span.hidden-sm-down Visit our Facebook page
 
-    nav#topNav.navbar.fixed-top.navbar-toggleable-sm.bg-theme
+    //nav#topNav.navbar.fixed-top.navbar-toggleable-sm.bg-theme
       .container
         button.navbar-toggler.hidden-md-up.float-right.text-light(type='button', data-toggle='collapse', data-target='#collapsingNavbar')
           | ☰
