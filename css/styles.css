@@ -103,8 +103,18 @@ p {
 .txt-light {
     color: #fff;
 }
-
-.text-light:hover,.text-light:focus {
+.navbar-icons {
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+}
+.navbar-icons:hover,
+.navbar-icons:focus:hover {
+    color: #fff;
+    background-color: #5dc384;
+}
+.txt-light:hover,.txt-light:focus {
     color: #eee;
     text-decoration:none;
 }

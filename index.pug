@@ -12,6 +12,8 @@ html
     link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
     link(rel='stylesheet', href='css/styles.css')
 
+    script(src='https://use.fontawesome.com/a9b62862e2.js')
+
   body
 
     nav.navbar.fixed-top.navbar-toggleable-md.navbar-default
@@ -23,6 +25,12 @@ html
              a.nav-item.nav-link.page-scroll.text-center(href='#about') About
              a.nav-item.nav-link.page-scroll.text-center(href='#sponsors') Sponsors
              a.nav-item.nav-link.page-scroll.text-center(href='#partners') Partners
+             a.nav-item.nav-link.page-scroll.text-center.hidden-lg-up(href='https://github.com/ichealthhack') GitHub
+             a.nav-item.nav-link.page-scroll.text-center.hidden-lg-up(href='https://www.eventbrite.co.uk/e/ic-healthhack-tickets-32275049542') Tickets
+      a.navbar-icons.hidden-md-down(href='https://github.com/ichealthhack')
+        i.fa.fa-github.fa-2x(aria-hidden='true')
+      a.navbar-icons.hidden-md-down(href='https://www.eventbrite.co.uk/e/ic-healthhack-tickets-32275049542')
+        i.fa.fa-ticket.fa-2x(aria-hidden='true')
 
     header
       .header-content
@@ -44,20 +52,6 @@ html
             a.btn.btn-primary-outline.page-scroll.m-t-3(href='https://www.facebook.com/events/244813969309795/')
               i.ion-social-facebook.hidden-md-up
               span.hidden-sm-down Visit our Facebook page
-
-    //nav#topNav.navbar.fixed-top.navbar-toggleable-sm.bg-theme
-      .container
-        button.navbar-toggler.hidden-md-up.float-right.text-light(type='button', data-toggle='collapse', data-target='#collapsingNavbar')
-          | ☰
-        a.navbar-brand.page-scroll(href='https://ichealthhack.github.io') HealthHack
-        #collapsingNavbar.collapse.navbar-collapse
-          ul.navbar-nav
-            li.nav-item
-              a.nav-link.page-scroll(href='#about') About
-            li.nav-item
-              a.nav-link.page-scroll(href='#sponsors') Sponsors
-            li.nav-item
-              a.nav-link.page-scroll(href='#partners') Partners
 
     section#about.bg-grey
       .container
