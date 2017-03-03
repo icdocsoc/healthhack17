@@ -84,6 +84,10 @@ p {
     background-color: #40ad6a;
 }
 
+.bg-dark {
+    background-color: #333331;
+}
+
 .bg-alt {
     background-color: #fff;
 }
@@ -156,6 +160,7 @@ footer h4, footer h6 {
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
     transition: all .4s;
+    border-bottom: 1px solid #fff;
 }
 
 .navbar-brand {
@@ -208,11 +213,13 @@ footer h4, footer h6 {
     .navbar .navbar-nav {
         float:none !important;
     }
+    table {
+        margin-top: 10px; 
+    }
 }
 
 @media(min-width:48em) {
     .navbar {
-        border-color: transparent;
         background-color: #40ad6a;
         min-height: 60px;
     }
