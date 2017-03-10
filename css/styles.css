@@ -36,6 +36,12 @@ hr.primary {
     opacity: 1;
 }
 
+hr.partner {
+    border-color: #333331 ;
+    opacity: 0.25;
+    max-width: 240px;
+}
+
 a {
     color: #40ad7a;
     -webkit-transition: all .35s;
@@ -68,7 +74,8 @@ p {
 .partner {
     max-height: 100%;
     max-width: 75%;
-    margin-bottom: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .wide-space {
