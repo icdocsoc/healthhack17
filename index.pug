@@ -12,6 +12,7 @@ html
     link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css', rel='stylesheet')
     link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
     link(rel='stylesheet', href='css/styles.css')
+    link(rel='stylesheet', href='css/slideshow.css')
 
     script(src='https://use.fontawesome.com/a9b62862e2.js')
 
@@ -34,6 +35,20 @@ html
         i.fa.fa-ticket.fa-2x(aria-hidden='true')
 
     header#home
+      ul.cb-slideshow(style="list-style: none;")
+          li
+            span Image 01
+          li
+            span Image 02
+          li
+            span Image 03
+          li
+            span Image 04
+          li
+            span Image 05
+          li
+            span Image 06
+      .dim
       .header-content
         .inner
           img.logo(src='images/logo.png')
@@ -68,6 +83,14 @@ html
               = 'This event is our first step in an effort to nurture a community of students interested in games and open-source software development with medical technology. Our aim is to create a community of active young people who employ their acquired knowledge to tackle health issues and relieve thousands of people from their suffering. You - the participants, will shape this community the way you want it to be and we will always be there to facilitate your efforts and make the occasional hotfix when everything breaks 🙂. The three values which should stand out to you when reading this are'
               strong  inspire, share, deliver
               = '.'
+
+    section.no-padding#photos
+      img.pic(src='./images/1.jpg')
+      img.pic(src='./images/2.jpg')
+      img.pic(src='./images/3.jpg')
+      img.pic(src='./images/4.jpg')
+      img.pic(src='./images/5.jpg')
+      img.pic(src='./images/6.jpg')
 
     section#schedule.bg-theme.txt-light
       .container.text-center
